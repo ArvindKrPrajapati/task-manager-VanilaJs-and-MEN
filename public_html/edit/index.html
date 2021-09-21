@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="theme-color" content="#1e90ff">
+    <link rel="stylesheet" href="style.css" />
+    <title>Edit Task</title>
+  </head>
+  <body onload="loadData()">
+    <main>
+    <div class="form-div">
+       <label for="name">Edit This Task</label><br>
+       <h4>
+         id: 
+         <script>
+          const id=location.search.split('id=')[1];
+          document.write(id);
+         </script>
+       </h4>
+        <input type="text" placeholder="Enter a task"  id="name"/>
+        <small class="error"></small>
+        <label for="isCompleted">Completed this task: </label>
+        <input type="checkbox" id="isCompleted"/>
+        <br><br>
+        <button class="edit">Edit Task</button>
+        <p class="success"></p>
+        <p class="success err"></p>
+     </div>
+   </main>
+  </body>
+  <script src="script.js"></script>
+</html>
